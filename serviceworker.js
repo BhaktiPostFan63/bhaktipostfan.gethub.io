@@ -4,10 +4,10 @@ const urlsToCache = [
     '/index.html',
     '/style.css',
     '/app.js',
-    'https://i.imgur.com/q8MDSbP.png',
-    'https://i.imgur.com/rpQMg2B.jpeg',
-    'https://i.imgur.com/gK9QY53.jpeg',
-    'https://i.imgur.com/G9L5fJ4.jpeg',
+    '',
+    '',
+    '',
+    '',
     'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'
 ];
 
