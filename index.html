@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhakti Post Fan</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen" class="loader-container">
+        <img src="https://i.imgur.com/q8MDSbP.png" alt="Bhakti Post Fan" class="loading-logo">
+    </div>
+
+    <div id="main-content" style="display:none;">
+        <div class="app-container">
+            <nav class="sidebar">
+                <img src="https://i.imgur.com/q8MDSbP.png" alt="Krishna" class="logo" title="Bhakti Post Fan">
+                <a href="#" class="nav-item" id="home-icon" title="Home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </a>
+                
+                <a href="#" class="favorites-icon-container nav-item" id="favorites-icon" title="Favorites">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.61l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="favorites-dot" id="favorites-dot"></span>
+                </a>
+                <a href="#" class="notification-icon-container nav-item" id="notification-icon" title="Notifications">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    <span class="notification-count" id="notification-count">0</span>
+                </a>
+                
+                <div class="switch-container">
+                    <label class="switch" title="Dark Mode">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <a href="#" class="nav-item" id="more-options-icon" title="More Options">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm16 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                </a>
+            </nav>
+
+            <main class="main-content">
+                <div id="search-section" class="search-section">
+                    <div class="search-container">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" class="search-bar" placeholder="Search" title="Search for posts">
+                    </div>
+
+                    <div class="search-suggestions" id="search-suggestions-box">
+                        <div class="suggestions-title">Ideas for you</div>
+                        <div class="suggestions-grid" id="suggestions-grid-container">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about-us-section" style="display:none;">
+                    <div class="info-section">
+                        <h2>About Us</h2>
+                        <p>Welcome to Bhakti Post Fan! Our mission is to provide a platform for sharing beautiful and inspiring devotional content. We believe in spreading positivity and spiritual art to a global audience. Thank you for being a part of our community.</p>
+                    </div>
+                </div>
+                
+                <div id="privacy-policy-section" style="display:none;">
+                    <div class="info-section">
+                        <h2>Privacy Policy</h2>
+                        <p>Your privacy is important to us. This app does not collect any personal data. All your saved favorites and notifications are stored locally on your device and are not shared with anyone.</p>
+                    </div>
+                </div>
+
+                <div id="all-posts-section">
+                    <h2>All</h2>
+                    <div class="photo-gallery" id="photo-gallery">
+                    </div>
+                </div>
+
+                <div id="favorites-section" style="display:none;">
+                    <h2>Favorites</h2>
+                    <div class="photo-gallery" id="favorite-gallery">
+                    </div>
+                </div>
+
+                <div id="notifications-section" style="display:none;">
+                    <h2>Notifications</h2>
+                    <ul class="notification-list" id="notification-list">
+                    </ul>
+                </div>
+                
+                <div id="contact-us-section" style="display:none;">
+                    <div class="contact-info">
+                        <h3>Contact Us</h3>
+                        <div class="owner-info">
+                            <h4>&#9679; Owner Shivam Sahani</h4>
+                        </div>
+                        <div class="social-links">
+                            <h4>&#9679; Social Media Links</h4>
+                            <a href="https://www.instagram.com/bhakti_post_fan/?hl=en" target="_blank" title="Instagram">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <div id="more-options-modal" class="more-options-modal">
+        <div class="more-options-content">
+            <div class="more-options-header">
+                <h2>More Options</h2>
+                <button class="more-options-close">&times;</button>
+            </div>
+            <ul class="more-options-list">
+                <li>
+                    <a href="#" id="about-us-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="privacy-policy-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        Privacy Policy
+                    </a>
+                </li>
+                 <li>
+                    <a href="#" id="contact-us-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span id="lightbox-close" class="lightbox-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </span>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="Full-screen view">
+    </div>
+    
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceworker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered! Scope:', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('Service Worker registration failed:', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
